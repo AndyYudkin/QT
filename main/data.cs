@@ -114,6 +114,7 @@ namespace main
                     ActiveRecipe = recipe;
                     Console.WriteLine($"time: {tick}, factory: {Id}, recipe: {recipe.Id}");
                     result = true;
+                    break;
                 }
 
             }
