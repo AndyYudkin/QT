@@ -81,7 +81,11 @@ namespace main
             while (i < length)
             {
                 var factory = factoryList[i];
-                var isStarted = factory.TryStartProducingProduct(productDictionary, tick);
+                var isStarted = false;
+                if (!factory.IsProducing())
+                {
+                    isStarted = factory.TryStartProducingProduct(productDictionary, tick);
+                }
                 if (isStarted)
                 {
                     factoryList.RemoveAt(i);

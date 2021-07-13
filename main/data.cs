@@ -98,7 +98,7 @@ namespace main
             bool result = false;
             foreach (var recipe in RecipeList)
             {
-                if (ActiveRecipe == null && CheckAvailableComponent(recipe, productDictionary))
+                if (CheckAvailableComponent(recipe, productDictionary))
                 {
                     foreach (var component in recipe.ComponentList)
                     {
